@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Chai Narrator</string>
+    <string name="accessibility_service_label">Chai Narrator</string>
+    <string name="accessibility_service_description">Reads new text from the app you choose out loud, in the voice you choose. Everything stays on this device; the app has no internet access at all.</string>
+
+    <string name="title_app_picker">Choose the app to narrate</string>
+    <string name="title_voice_picker">Choose a voice</string>
+
+    <string name="notification_channel_name">Narrator bubble</string>
+    <string name="notification_channel_description">Shows while the floating narrator bubble is running.</string>
+    <string name="notification_title">Chai Narrator is listening</string>
+    <string name="notification_text">Narrating %1$s. Tap to open settings.</string>
+    <string name="notification_text_no_target">No app selected yet. Tap to choose one.</string>
+    <string name="notification_action_stop">Stop</string>
+
+    <string name="step_overlay_title">1. Allow the floating bubble</string>
+    <string name="step_overlay_body">Chai Narrator needs permission to draw over other apps so the bubble can stay on screen while you read.</string>
+    <string name="step_overlay_button">Grant overlay permission</string>
+
+    <string name="step_accessibility_title">2. Turn on the narrator service</string>
+    <string name="step_accessibility_body">Android only lets an app read another app\'s text through an accessibility service. Turn on Chai Narrator in Accessibility settings.</string>
+    <string name="step_accessibility_button">Open accessibility settings</string>
+
+    <string name="step_target_title">3. Pick the app to read</string>
+    <string name="step_target_body">The narrator listens to this one app and ignores everything else on your phone.</string>
+    <string name="step_target_button">Choose app</string>
+
+    <string name="step_voice_title">4. Pick the voice</string>
+    <string name="step_voice_body">Android does not label voices by age, so audition a few and keep the one that sounds like the narrator you want. Warm, composed, mid-range voices tend to read as about forty.</string>
+    <string name="step_voice_button">Choose voice</string>
+
+    <string name="section_delivery">Delivery</string>
+    <string name="label_rate">Pace</string>
+    <string name="label_pitch">Pitch</string>
+    <string name="label_auto_read">Read new messages automatically</string>
+    <string name="label_summarise">Summarise very long messages</string>
+    <string name="label_summarise_threshold">Summarise above</string>
+    <string name="label_verbatim_instructions">Always read step-by-step instructions in full</string>
+    <string name="label_sentence_pauses">Pause between sentences</string>
+
+    <string name="action_start_bubble">Start bubble</string>
+    <string name="action_stop_bubble">Stop bubble</string>
+    <string name="action_test_voice">Test</string>
+
+    <string name="test_utterance">Good. I am here, I can see what Chai is saying, and I will read it to you clearly.</string>
+
+    <string name="status_ready">Ready</string>
+    <string name="status_needs_setup">Setup not finished</string>
+    <string name="status_chars">%1$d characters</string>
+
+    <string name="permission_overlay_missing">Grant the overlay permission first.</string>
+    <string name="accessibility_missing">Turn on the Chai Narrator accessibility service first.</string>
+    <string name="target_missing">Choose an app to narrate first.</string>
+    <string name="no_tts_engine">No text-to-speech engine is installed on this device.</string>
+    <string name="voice_default">Engine default</string>
+    <string name="voice_network_warning">Needs network (this app has no internet permission, so pick a local voice)</string>
+</resources>

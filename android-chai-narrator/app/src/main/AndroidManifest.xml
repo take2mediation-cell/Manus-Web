@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      There is deliberately NO android.permission.INTERNET here.
+
+      This app reads on-screen text from another app, so the only defensible
+      privacy posture is that the text can never leave the device. Without the
+      INTERNET permission the platform itself blocks every network socket, which
+      makes the guarantee verifiable by anyone who reads this file rather than
+      something the user has to take on trust.
+    -->
+
+    <!-- Draws the floating bubble on top of other apps. -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Keeps the bubble and the speech queue alive while another app is in front. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Lets the bubble vibrate softly when it starts or stops reading. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--
+      Needed to show the "which app should I narrate?" picker. On API 30+ an app
+      cannot list installed packages without it. It is used only to populate that
+      one screen; the app never reports the list anywhere.
+    -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".NarratorApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChaiNarrator">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.AppPickerActivity"
+            android:exported="false"
+            android:label="@string/title_app_picker"
+            android:parentActivityName=".ui.MainActivity" />
+
+        <activity
+            android:name=".ui.VoicePickerActivity"
+            android:exported="false"
+            android:label="@string/title_voice_picker"
+            android:parentActivityName=".ui.MainActivity" />
+
+        <service
+            android:name=".service.ChaiAccessibilityService"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <service
+            android:name=".service.BubbleService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keeps the floating narrator bubble on screen and the text-to-speech queue running while the user reads another app." />
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,11 @@
+<resources>
+    <color name="ink">#FF101418</color>
+    <color name="surface">#FFF7F5F2</color>
+    <color name="surface_raised">#FFFFFFFF</color>
+    <color name="accent">#FF6B4E9B</color>
+    <color name="accent_soft">#FFEDE7F6</color>
+    <color name="muted">#FF6A6F76</color>
+    <color name="bubble_idle">#F21F2430</color>
+    <color name="bubble_speaking">#F26B4E9B</color>
+    <color name="bubble_ring">#FFB9A4E8</color>
+</resources>
