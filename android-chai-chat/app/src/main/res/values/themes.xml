@@ -1,0 +1,12 @@
+<resources>
+    <!-- The chat screen supplies its own Toolbar, so the framework bar is off. -->
+    <style name="Theme.ChaiChat" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/surface</item>
+    </style>
+
+    <!-- Settings has no toolbar of its own and uses the framework one for the
+         up arrow, so it opts back in. -->
+    <style name="Theme.ChaiChat.Settings" parent="Theme.Material3.DayNight">
+        <item name="android:statusBarColor">@color/surface</item>
+    </style>
+</resources>

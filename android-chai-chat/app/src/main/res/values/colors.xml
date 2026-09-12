@@ -1,0 +1,12 @@
+<resources>
+    <color name="ink">#FF11161C</color>
+    <color name="surface">#FFF6F7F9</color>
+    <color name="bubble_user">#FF2E6BE6</color>
+    <color name="bubble_user_text">#FFFFFFFF</color>
+    <color name="bubble_bot">#FFFFFFFF</color>
+    <color name="bubble_bot_text">#FF11161C</color>
+    <color name="bubble_failed">#FFFDECEC</color>
+    <color name="danger">#FFB3261E</color>
+    <color name="muted">#FF6A7178</color>
+    <color name="divider">#1A000000</color>
+</resources>
