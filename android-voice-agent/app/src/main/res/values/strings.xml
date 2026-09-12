@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chai Voice Agent</string>
+    <string name="service_label">Chai Voice Agent Screen Reader</string>
+    <string name="accessibility_service_description">Reads new chat text out loud while you use the Chai AI app. It only looks at screens belonging to the Chai app package(s) configured in the Chai Voice Agent settings, never sends anything off the device, and can be turned off at any time.</string>
+
+    <string name="status_service_on">Accessibility service: ON</string>
+    <string name="status_service_off">Accessibility service: OFF (tap below to enable)</string>
+    <string name="btn_open_accessibility_settings">Open Accessibility Settings</string>
+    <string name="label_speak_enabled">Speak new messages</string>
+    <string name="label_rate">Speech rate</string>
+    <string name="label_pitch">Speech pitch</string>
+    <string name="label_target_packages">Target app package(s), comma separated</string>
+    <string name="btn_save_settings">Save</string>
+    <string name="btn_test_speak">Test voice</string>
+    <string name="test_speak_text">Chai voice agent is ready to read your chats out loud.</string>
+    <string name="notif_channel_name">Chai Voice Agent status</string>
+    <string name="notif_title">Chai Voice Agent</string>
+    <string name="notif_text_running">Listening to Chai and speaking new messages</string>
+    <string name="notif_text_paused">Paused, tap the app to resume</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+</resources>
